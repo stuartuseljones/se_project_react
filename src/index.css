@@ -1,0 +1,9 @@
+@import url(./vendor/normalize.css);
+@font-face {
+    font-family: CabinetGrotesk-Regular;
+    src: url(./assets/CabinetGrotesk-Regular.woff);
+}
+@font-face {
+    font-family: CabinetGrotesk-Bold;
+    src: url(./assets/CabinetGrotesk-Bold.woff);
+}

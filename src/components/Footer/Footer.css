@@ -1,0 +1,14 @@
+.footer__container{
+    display: flex;
+    padding: 0 42px 24px 40px;
+    margin: 85px 0 0 0;
+}
+.footer__developer{
+ font-family: CabinetGrotesk-Regular;
+}
+
+.footer__year {
+    margin-left: auto;
+    font-family: CabinetGrotesk-Regular;
+
+}
