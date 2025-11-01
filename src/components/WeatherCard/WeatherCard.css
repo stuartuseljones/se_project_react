@@ -1,0 +1,28 @@
+.weatherCard__container {
+  max-width: 1440px;
+  position: relative;
+  display: flex;
+  padding: 0 40px 0 40px;
+}
+
+.weatherCard__temp {
+  margin: 0;
+  /* z-index: 1; */
+  position: absolute;
+  left: 56px;
+  top: 20px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 1);
+  font-family: CabinetGrotesk-Bold;
+}
+
+.weatherCard__image {
+  width: 100%;
+  object-fit: cover;
+  height: 80px;
+  overflow: hidden;
+  object-position: top right;
+  border-radius: 12px;
+}

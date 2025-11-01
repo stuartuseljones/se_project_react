@@ -1,0 +1,133 @@
+/* TODO - check font parameters */
+/* Style hover states for modal buttons */
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.modal_opened {
+  visibility: visible;
+}
+
+.modal__content {
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 28px 28px 36px 28px;
+  border-radius: 20px;
+  border: 1px;
+  border-color: rgba(0, 0, 0, 0.3);
+  max-width: 496px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  border-style: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.modal__close-icon {
+  background: transparent;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.modal__title {
+  margin: 0;
+  font-family: CabinetGrotesk-bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__input {
+  display: block;
+  padding: 8px 0 0;
+  border-style: none;
+  font-family: CabinetGrotesk-bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.modal__label_type_radio {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__label_type_radio:has(input[type="radio"]:checked) {
+  color: rgba(0, 0, 0, 1);
+}
+
+.modal__label {
+  font-family: CabinetGrotesk-bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 24px 0 0 0;
+  margin: 0px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.modal__legend {
+  font-family: CabinetGrotesk-bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 24px 0 12px;
+  /* checked */
+}
+
+.modal__radio-buttons {
+  border-style: none;
+  display: flex;
+  flex-direction: column;
+  border-style: none;
+  padding: 0;
+  font-family: CabinetGrotesk-bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.modal__radio-input {
+  margin: 0 8px 8px 0;
+}
+
+.modal__submit {
+  border-style: none;
+  font-family: CabinetGrotesk-bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin: 32px auto 0 0;
+  background-color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.modal__submit:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}

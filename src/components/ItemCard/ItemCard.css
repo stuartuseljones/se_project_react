@@ -1,0 +1,44 @@
+.cards{
+margin: 0 40px 0 40px;
+
+}
+
+.cards__list {
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    position: relative;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}  
+.card__image {
+    border-radius: 8px;
+    width: 325px;
+    border: 1px;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.card__name{
+    margin: 0;
+    font-family: CabinetGrotesk-Bold;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 15px;
+    padding: 2px 12px;
+    border-radius: 4px;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.cards__text{
+    margin: 40px 0px 34px;
+    font-family: CabinetGrotesk-Bold;
+    font-weight: 700;
+    font-size: 20px;
+}

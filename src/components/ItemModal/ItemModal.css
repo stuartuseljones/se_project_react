@@ -1,0 +1,45 @@
+/* TODO Style preview modal */
+
+.modal__content_type_image {
+  width: 498px;
+  margin: 0;
+  padding: 0;
+}
+
+.modal__image {
+  width: 100%;
+  margin: 0;
+  border-radius: 16px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.modal__close-icon {
+  background: transparent;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.modal__footer {
+  margin: 0;
+  padding: 0 0 32px 32px;
+}
+.modal__caption {
+  margin: 0;
+  padding: 20px 0 0;
+  font-family: CabinetGrotesk-bold;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.modal__weather {
+  margin: 0;
+  padding: 12px 0 0;
+  font-family: CabinetGrotesk-bold;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}

@@ -1,0 +1,8 @@
+.page {
+  background-color: rgba(243, 243, 243, 1);
+}
+
+.page__content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
