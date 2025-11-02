@@ -1,5 +1,5 @@
 import "./WeatherCard.css";
-import weatherCardCloudy from "../../assets/weatherCard-cloudy.png";
+import weatherCardCloudy from "../../assets/weathercard-cloudy.png";
 function WeatherCard({ weatherData }) {
   return (
     <div className="weatherCard__container">

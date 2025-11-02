@@ -1,11 +1,8 @@
 import "./ItemModal.css";
-import close__button from "../../assets/close-button-gray.png";
-function ItemModal({ activeModal, card, onClose, onCardClick }) {
+import closeButton from "../../assets/close-button-gray.png";
+function ItemModal({ isOpen, activeModal, card, onClose, onCardClick }) {
   return (
-    <div
-      onClick={onClose}
-      className={`modal ${activeModal === "preview" && "modal_opened"}`}
-    >
+    <div onClick={onClose} className={`modal ${isOpen ? "modal_opened" : ""}`}>
       <div
         onClick={(e) => e.stopPropagation()}
         className="modal__content modal__content_type_image"
@@ -13,7 +10,7 @@ function ItemModal({ activeModal, card, onClose, onCardClick }) {
         <button className="modal__close" type="button" onClick={onClose}>
           <img
             className="modal__close-icon"
-            src={close__button}
+            src={closeButton}
             alt="close button"
           />
         </button>
