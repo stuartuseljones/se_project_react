@@ -1,11 +1,15 @@
+// React Imports
 import { useEffect, useState } from "react";
-import reactLogo from "../../assets/react.svg";
 import "./App.css";
+
+// Components
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
+
+// Utils/API
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import {
   coordinates,
@@ -121,7 +125,7 @@ function App() {
         activeModal={activeModal}
         card={selectedCard}
         onClose={closeActiveModal}
-        isOpen={activeModal === "add-garment"}
+        isOpen={activeModal === "preview"}
       />
     </div>
   );

@@ -1,6 +1,6 @@
 import "./ItemModal.css";
 import closeButton from "../../assets/close-button-gray.png";
-function ItemModal({ isOpen, activeModal, card, onClose, onCardClick }) {
+function ItemModal({ isOpen, card, onClose }) {
   return (
     <div onClick={onClose} className={`modal ${isOpen ? "modal_opened" : ""}`}>
       <div
