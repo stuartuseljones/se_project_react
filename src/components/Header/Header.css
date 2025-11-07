@@ -1,48 +1,47 @@
 .header {
-display: flex;
-align-items: center;
-padding: 32px 0 0 0;
-margin: 0 40px 28px;
+  display: flex;
+  align-items: center;
+  padding: 32px 0 0 0;
+  margin: 0 40px 28px;
 }
 
 .header__logo {
-width: 89px;
-height: 40px;
+  width: 89px;
+  height: 40px;
 }
 
-.header__date-and-location{
-    margin: 0 0 0 24px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    font-family: CabinetGrotesk-Bold;
-
+.header__date-and-location {
+  margin: 0 0 0 24px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: CabinetGrotesk-Bold;
 }
 
-.header__add-clothes-btn{
-    margin-left: auto;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    border-style: none;
-    font-family: CabinetGrotesk-Bold;
-
+.header__add-clothes-btn {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  border-style: none;
+  font-family: CabinetGrotesk-Bold;
 }
 
-.header__user-container{
-    display: flex;
-    align-items: center;
+.header__user-container {
+  display: flex;
+  align-items: center;
 }
-
-.header__name{
-    margin: 0 0 0 20px;
-    font-size: 20px;
-    font-weight: 700;
-        font-family: CabinetGrotesk-Bold;
-
+.header__nav-link {
+  color: black;
+  text-decoration: none;
 }
-.header__avatar{
-    width: 40px;
-    height: 40px;
-    margin-left: 12px;
+.header__name {
+  margin: 0 0 0 20px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: CabinetGrotesk-Bold;
+}
+.header__avatar {
+  width: 40px;
+  height: 40px;
+  margin-left: 12px;
 }

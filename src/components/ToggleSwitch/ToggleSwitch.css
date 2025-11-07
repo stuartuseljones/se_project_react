@@ -1,0 +1,52 @@
+.toggle-switch {
+  margin: 0;
+  margin-left: auto;
+  width: 56px;
+  height: 28px;
+  border: 2px solid rgba(126, 126, 126, 1);
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+.toggle-switch__checkbox {
+  opacity: 0;
+}
+
+.toggle-switch__circle {
+  background-color: black;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  left: 0;
+  transition: all 0.2s;
+  z-index: 0;
+}
+
+.toggle-switch__text {
+  position: absolute;
+  top: 6px;
+  font-family: CabinetGrotesk-bold;
+  font-size: 14px;
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.toggle-switch__text-f {
+  color: white;
+  left: 9px;
+}
+
+.toggle-switch__text-c {
+  position: absolute;
+  right: 9px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.toggle-switch__checkbox:checked ~ .toggle-switch__circle {
+  left: 28px;
+}

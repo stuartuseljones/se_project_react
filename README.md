@@ -6,6 +6,9 @@ https://stuartuseljones.github.io/se_project_react/
 Video overview available here:
 https://drive.google.com/file/d/1LNGh4B4GVDuWDz3-Mz-Jzi3K69ZSoYiX/view?usp=sharing
 
+Second Iteration Video Overview (Toggle Switch Implementation)
+https://www.loom.com/share/357a86016c674c218d6a070cab86fac8
+
 Overview
 
 - Project built from the ground up according to Figma.

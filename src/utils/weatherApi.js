@@ -13,17 +13,33 @@ export const getWeather = ({ latitude, longitude }, apiKey) => {
 export const filterWeatherData = (data) => {
   const result = {};
   result.city = data.name;
-  result.temp = { F: data.main.temp };
-  result.type = getWeatherType(result.temp.F);
+  result.temp = {
+    F: Math.round(data.main.temp),
+    C: Math.round(((data.main.temp - 32) * 5) / 9),
+  };
+  result.type = {
+    F: getWeatherType(result.temp.F, "F"),
+    C: getWeatherType(result.temp.C, "C"),
+  };
   return result;
 };
 
-const getWeatherType = (temperature) => {
-  if (temperature >= 86) {
-    return "hot";
-  } else if (temperature >= 66) {
-    return "warm";
+const getWeatherType = (temperature, unit = "F") => {
+  if (unit === "C") {
+    if (temperature >= 30) {
+      return "hot";
+    } else if (temperature >= 19) {
+      return "warm";
+    } else {
+      return "cold";
+    }
   } else {
-    return "cold";
+    if (temperature >= 86) {
+      return "hot";
+    } else if (temperature >= 66) {
+      return "warm";
+    } else {
+      return "cold";
+    }
   }
 };

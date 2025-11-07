@@ -18,10 +18,12 @@
   visibility: visible;
 }
 
+.modal__content-form {
+  padding: 28px 28px 36px 28px;
+}
 .modal__content {
   position: relative;
   background-color: rgba(255, 255, 255, 1);
-  padding: 28px 28px 36px 28px;
   border-radius: 20px;
   border: 1px;
   border-color: rgba(0, 0, 0, 0.3);

@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+.modal__content {
+  margin: 0;
+}
+
 .modal__image {
   width: 100%;
   margin: 0;
@@ -25,7 +29,24 @@
 .modal__footer {
   margin: 0;
   padding: 0 0 32px 32px;
+  position: relative;
 }
+
+.modal__delete-button {
+  color: rgba(255, 77, 0, 1);
+  font-size: 20px;
+  font-family: CabinetGrotesk-bold;
+  line-height: 24px;
+  font-weight: 700;
+  background-color: transparent;
+  border-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 32px;
+  top: 20px;
+}
+
 .modal__caption {
   margin: 0;
   padding: 20px 0 0;
@@ -36,8 +57,8 @@
 }
 
 .modal__weather {
-  margin: 0;
   padding: 12px 0 0;
+  margin: 0;
   font-family: CabinetGrotesk-bold;
   font-size: 20px;
   line-height: 24px;

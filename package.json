@@ -1,5 +1,4 @@
 {
-  "homepage": "https://stuartuseljones.github.io/se_project_react/",
   "name": "wtwr",
   "private": true,
   "version": "0.0.0",
@@ -14,7 +13,8 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
