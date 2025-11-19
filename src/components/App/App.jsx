@@ -37,13 +37,7 @@ function App() {
       : setCurrentTemperatureUnit("F");
   };
 
-  const handleReset = (inputValues) => {
-    inputValues.name = "";
-    inputValues.imageUrl = "";
-    inputValues.weather = "";
-  };
-
-  const onAddItem = (inputValues) => {
+  const handleAddItem = (inputValues) => {
     const newCardData = {
       name: inputValues.name,
       imageUrl: inputValues.imageUrl,
@@ -92,8 +86,8 @@ function App() {
     const fetchWeatherFor = (coords) => {
       getWeather(coords, apiKey)
         .then((data) => {
-          const filterData = filterWeatherData(data);
-          setWeatherData(filterData);
+          const filteredData = filterWeatherData(data);
+          setWeatherData(filteredData);
         })
         .catch(console.error);
     };
@@ -119,9 +113,7 @@ function App() {
     }
     getItems()
       .then((data) => {
-        // TODO - meak new items appear first.
-        // look up how to reverse an array in JS
-        setClothingItems(data);
+        setClothingItems(data.slice().reverse());
       })
       .catch(console.error);
   }, []);
@@ -162,7 +154,7 @@ function App() {
           isOpen={activeModal === "add-garment"}
           activeModal={activeModal}
           onClose={closeActiveModal}
-          onAddItem={onAddItem}
+          handleAddItem={handleAddItem}
           buttonText="Add garment"
         />
         <ItemModal

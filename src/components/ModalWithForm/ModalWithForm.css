@@ -84,15 +84,6 @@
   animation: shake 0.3s;
 }
 
-.modal__error {
-  color: #ff4d4d;
-  font-size: 12px;
-  line-height: 15px;
-  margin-top: 8px;
-  display: block;
-  font-weight: 400;
-}
-
 .modal__label_type_radio {
   color: rgba(0, 0, 0, 0.5);
 }
@@ -182,8 +173,13 @@
   margin-top: 8px;
   font-family: CabinetGrotesk-bold;
   animation: fadeIn 0.3s ease;
-  /* keep error messages in the flow so they appear under the inputs */
   position: relative;
+  color: #ff4d4d;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 8px;
+  display: block;
+  font-weight: 400;
 }
 
 @keyframes fadeIn {

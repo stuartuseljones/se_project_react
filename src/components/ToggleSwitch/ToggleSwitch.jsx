@@ -10,6 +10,7 @@ export default function ToggleSwitch({}) {
   return (
     <label htmlFor="units" className="toggle-switch">
       <input
+        checked={currentTemperatureUnit === "C"}
         onChange={handleToggleSwitchChange}
         id="units"
         type="checkbox"

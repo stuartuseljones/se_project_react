@@ -1,6 +1,5 @@
 import "./DeleteConfirmModal.css";
 import closeButtonGray from "../../assets/close-button.png";
-import { removeItem } from "../../utils/api";
 
 const DeleteConfirmModal = ({ isOpen, card, onClose, deleteItemHandler }) => {
   const deleteItem = () => {

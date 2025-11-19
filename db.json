@@ -73,18 +73,6 @@
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09"
     },
     {
-      "id": 17
-    },
-    {
-      "id": 18
-    },
-    {
-      "id": 19
-    },
-    {
-      "id": 20
-    },
-    {
       "id": 21
     },
     {
@@ -119,36 +107,22 @@
       "id": 30
     },
     {
-      "weather": "warm",
-      "id": 31
-    },
-    {
-      "weather": "hot",
-      "id": 32
-    },
-    {
       "name": "Mittens",
       "imageUrl": "https://i0.wp.com/pearlyarts.com/wp-content/uploads/2023/11/FREE-Blue-Mittens-Clipart-WM.png?fit=1000%2C1000&ssl=1",
       "weather": "",
       "id": 34
     },
     {
-      "name": "Boots",
-      "imageUrl": "https://media.istockphoto.com/id/1282050777/vector/boot-icon-on-transparent-background.jpg?s=612x612&w=0&k=20&c=BM1ryP1FqK-cy0A0_lB4KAbdZyU_u13CQGtzhcVH0xo=",
-      "weather": "cold",
-      "id": 35
-    },
-    {
-      "name": "aasdf",
-      "imageUrl": "https://media.istockphoto.com/id/1282050777/vector/boot-icon-on-transparent-background.jpg?s=612x612&w=0&k=20&c=BM1ryP1FqK-cy0A0_lB4KAbdZyU_u13CQGtzhcVH0xo=",
-      "weather": "hot",
-      "id": 36
-    },
-    {
       "name": "dad",
       "imageUrl": "https://media.istockphoto.com/id/1282050777/vector/boot-icon-on-transparent-background.jpg?s=612x612&w=0&k=20&c=BM1ryP1FqK-cy0A0_lB4KAbdZyU_u13CQGtzhcVH0xo=",
       "weather": "cold",
       "id": 37
+    },
+    {
+      "name": "dad",
+      "imageUrl": "https://i.etsystatic.com/43432212/r/il/ad26b7/4998980354/il_794xN.4998980354_86ox.jpg",
+      "weather": "cold",
+      "id": 38
     }
   ]
 }
