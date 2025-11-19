@@ -1,12 +1,21 @@
-import ModalWithForm from "../components/ModalWithForm/ModalWithForm";
-import { useForm } from "../hooks/useForm";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import { useFormWithValidation } from "../../hooks/useFormWithValidation";
 
 const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
   const defaultValues = { name: "", imageUrl: "", weather: "" };
-  const { values, handleChange, reset } = useForm(defaultValues);
+  const {
+    values,
+    handleChange,
+    errors,
+    isValid,
+    reset,
+    validateForm,
+    isSubmitted,
+  } = useFormWithValidation(defaultValues);
 
   function handleSubmit(evt) {
     evt.preventDefault();
+    if (!validateForm()) return;
     onAddItem(values);
     reset();
   }
@@ -19,30 +28,41 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
       onClose={onClose}
       onSubmit={handleSubmit}
       buttonText="Add garment"
+      isValid={isValid}
     >
       <label className="modal__label" htmlFor="name">
         Name
         <input
           type="text"
-          className="modal__input"
+          className={`modal__input ${
+            isSubmitted && errors.name ? "modal__input_type_error" : ""
+          }`}
           id="name"
           name="name"
           placeholder="Name"
           value={values.name}
           onChange={handleChange}
         />
+        {isSubmitted && errors.name && (
+          <span className="modal__error">{errors.name}</span>
+        )}
       </label>
       <label className="modal__label" htmlFor="imageUrl">
         Image URL
         <input
           type="url"
-          className="modal__input"
+          className={`modal__input ${
+            isSubmitted && errors.imageUrl ? "modal__input_type_error" : ""
+          }`}
           id="imageUrl"
           name="imageUrl"
           placeholder="Image URL"
           value={values.imageUrl}
           onChange={handleChange}
         />
+        {isSubmitted && errors.imageUrl && (
+          <span className="modal__error">{errors.imageUrl}</span>
+        )}
       </label>
       <fieldset className="modal__radio-buttons">
         <legend className="modal__legend">Select the weather type:</legend>
@@ -82,6 +102,9 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
           />
           Cold
         </label>
+        {isSubmitted && errors.weather && (
+          <span className="modal__error">{errors.weather}</span>
+        )}
       </fieldset>
     </ModalWithForm>
   );

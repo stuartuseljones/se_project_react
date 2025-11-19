@@ -65,12 +65,32 @@
 
 .modal__input {
   display: block;
-  padding: 8px 0 0;
-  border-style: none;
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid black;
   font-family: CabinetGrotesk-bold;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
+  transition: all 0.3s ease;
+  outline: none;
+  background-color: transparent;
+}
+
+.modal__input_type_error {
+  border-bottom: 2px solid #ff4d4d;
+  color: #ff4d4d;
+  animation: shake 0.3s;
+}
+
+.modal__error {
+  color: #ff4d4d;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 8px;
+  display: block;
+  font-weight: 400;
 }
 
 .modal__label_type_radio {
@@ -87,9 +107,11 @@
   line-height: 20px;
   font-weight: 700;
   padding: 24px 0 0 0;
-  margin: 0px;
+  margin: 0 0 20px 0;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal__legend {
@@ -132,4 +154,45 @@
 
 .modal__submit:hover {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal__submit:disabled {
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: not-allowed;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.modal__error {
+  color: #ff4d4d;
+  font-size: 12px;
+  line-height: 15px;
+  display: block;
+  margin-top: 8px;
+  font-family: CabinetGrotesk-bold;
+  animation: fadeIn 0.3s ease;
+  /* keep error messages in the flow so they appear under the inputs */
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

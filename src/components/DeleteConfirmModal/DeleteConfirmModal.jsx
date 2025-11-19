@@ -4,7 +4,9 @@ import { removeItem } from "../../utils/api";
 
 const DeleteConfirmModal = ({ isOpen, card, onClose, deleteItemHandler }) => {
   const deleteItem = () => {
-    deleteItemHandler(card._id);
+    // support both `id` and legacy `_id` fields
+    const idToDelete = card?.id ?? card?._id;
+    deleteItemHandler(idToDelete);
   };
   return (
     <div onClick={onClose} className={`modal ${isOpen ? "modal_opened" : ""}`}>

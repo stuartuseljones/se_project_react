@@ -9,13 +9,13 @@ import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import ItemModal from "../ItemModal/ItemModal";
-import AddItemModal from "../../AddItemModal/AddItemModal";
+import AddItemModal from "../AddItemModal/AddItemModal";
 import Profile from "../Profile/Profile";
 import DeleteConfirmModal from "../DeleteConfirmModal/DeleteConfirmModal";
 
 // Utils/API
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
-import { coordinates, apiKey, getItems, addItem } from "../../utils/api";
+import { apiKey, getItems, addItem } from "../../utils/api";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import { removeItem } from "../../utils/api";
@@ -76,9 +76,10 @@ function App() {
     removeItem(cardID)
       .then(() => {
         setClothingItems((prevItems) =>
-          prevItems.filter((item) => item._id !== cardID)
+          prevItems.filter((item) => (item.id ?? item._id) !== cardID)
         );
-      }, closeActiveModal())
+        closeActiveModal();
+      })
       .catch(console.error);
   };
 
@@ -87,12 +88,35 @@ function App() {
   };
 
   useEffect(() => {
-    getWeather(coordinates, apiKey)
-      .then((data) => {
-        const filterData = filterWeatherData(data);
-        setWeatherData(filterData);
-      })
-      .catch(console.error);
+    // helper to fetch weather for given coordinates
+    const fetchWeatherFor = (coords) => {
+      getWeather(coords, apiKey)
+        .then((data) => {
+          const filterData = filterWeatherData(data);
+          setWeatherData(filterData);
+        })
+        .catch(console.error);
+    };
+
+    // Try browser Geolocation API first, fall back to a default location
+    const fallbackCoords = { latitude: 42.1973611, longitude: -122.7130278 };
+
+    if (navigator && navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          fetchWeatherFor({ latitude, longitude });
+        },
+        (err) => {
+          console.warn("Geolocation failed, using fallback coords:", err);
+          fetchWeatherFor(fallbackCoords);
+        },
+        { enableHighAccuracy: false, timeout: 5000, maximumAge: 0 }
+      );
+    } else {
+      // Browser doesn't support geolocation
+      fetchWeatherFor(fallbackCoords);
+    }
     getItems()
       .then((data) => {
         // TODO - meak new items appear first.

@@ -18,15 +18,29 @@ export const addItem = ({ name, imageUrl, weather }) => {
 };
 
 export const removeItem = (itemID) => {
-  return fetch(`${baseUrl}/items/${itemID}`, {
-    method: "DELETE",
-    headers,
-  }).then(handleServerResponse);
-};
+  // json-server may store items with a different id field (e.g. _id).
+  // First try to delete by direct id, otherwise lookup by `_id` and delete by resource id.
+  const tryDelete = (id) =>
+    fetch(`${baseUrl}/items/${id}`, {
+      method: "DELETE",
+      headers,
+    }).then(handleServerResponse);
 
-export const coordinates = {
-  latitude: 42.1973611,
-  longitude: -122.7130278,
+  // Attempt direct delete first
+  return tryDelete(itemID).catch(() => {
+    // If direct delete failed, try to find the resource by _id
+    return fetch(`${baseUrl}/items?_id=${itemID}`, { headers })
+      .then(handleServerResponse)
+      .then((items) => {
+        if (!items || items.length === 0) {
+          return Promise.reject(`Item with id ${itemID} not found`);
+        }
+        const resource = items[0];
+        // resource may have a server-assigned `id` field
+        const resourceId = resource.id ?? resource._id;
+        return tryDelete(resourceId);
+      });
+  });
 };
 
 export const apiKey = "76aef2f128af83ba75b1d09a6ab29864";

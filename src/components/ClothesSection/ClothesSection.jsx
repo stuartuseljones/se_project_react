@@ -22,7 +22,7 @@ export default function ClothesSection({
         {clothingItems.map((item) => {
           return (
             <ItemCard
-              key={item._id}
+              key={item.id ?? item._id}
               item={item}
               onCardClick={handleCardClick}
             />
