@@ -48,7 +48,6 @@ function App() {
       .then((data) => {
         setClothingItems((prevItems) => [data, ...prevItems]);
         closeActiveModal();
-        handleReset();
         reset();
       })
       .catch(console.error);
