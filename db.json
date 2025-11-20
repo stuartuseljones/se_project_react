@@ -1,128 +1,90 @@
 {
   "items": [
     {
-      "id": 3,
+      "_id": 3,
       "name": "Coat",
       "weather": "cold",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Coat.png?etag=298717ed89d5e40b1954a1831ae0bdd4"
     },
     {
-      "id": 4,
+      "_id": 4,
       "name": "Dress",
       "weather": "hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Dress.png?etag=1f9cd32a311ab139cab43494883720bf"
     },
     {
-      "id": 5,
+      "_id": 5,
       "name": "Hoodie",
       "weather": "cold",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Hoodie.png?etag=5f52451d0958ccb1016c78a45603a4e8"
     },
     {
-      "id": 7,
+      "_id": 7,
       "name": "Jeans",
       "weather": "warm",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Jeans.png?etag=58345e8bef1ce5f95ac882e71d309e6c"
     },
     {
-      "id": 8,
+      "_id": 8,
       "name": "Loafers",
       "weather": "warm",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Loafers.png?etag=dc2d6e1ca7b297597406e35c40aef030"
     },
     {
-      "id": 9,
+      "_id": 9,
       "name": "Sandals",
       "weather": "hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sandals.png?etag=9bea85a77c0306586d2b71a33b626d41"
     },
     {
-      "id": 11,
+      "_id": 11,
       "name": "Shorts",
       "weather": "Hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Shorts.png?etag=d728c496643f610de8d8fea92dd915ba"
     },
     {
-      "id": 12,
+      "_id": 12,
       "name": "Skirt",
       "weather": "hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Skirt.png?etag=27a6bea7e1b63218820d615876fa31d1"
     },
     {
-      "id": 13,
+      "_id": 13,
       "name": "Sneakers",
       "weather": "warm",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sneakers.png?etag=3efeec41c1c78b8afe26859ca7fa7b6f"
     },
     {
-      "id": 14,
+      "_id": 14,
       "name": "Sunglasses",
       "weather": "hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sunglasses.png?etag=a1bced9e331d36cb278c45df51150432"
     },
     {
-      "id": 15,
+      "_id": 15,
       "name": "Sweatshirt",
       "weather": "warm",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sweatshirt.png?etag=008a9674757bea2e0bdb31242e364be0"
     },
     {
-      "id": 16,
+      "_id": 16,
       "name": "T-Shirt",
       "weather": "hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09"
     },
-    {
-      "id": 21
-    },
-    {
-      "id": 22
-    },
-    {
-      "weather": "hot",
-      "id": 23
-    },
-    {
-      "weather": "warm",
-      "id": 24
-    },
-    {
-      "weather": "hot",
-      "id": 25
-    },
-    {
-      "weather": "warm",
-      "id": 26
-    },
-    {
-      "weather": "warm",
-      "id": 27
-    },
-    {
-      "weather": "warm",
-      "id": 29
-    },
-    {
-      "weather": "hot",
-      "id": 30
-    },
+
     {
       "name": "Mittens",
       "imageUrl": "https://i0.wp.com/pearlyarts.com/wp-content/uploads/2023/11/FREE-Blue-Mittens-Clipart-WM.png?fit=1000%2C1000&ssl=1",
       "weather": "",
-      "id": 34
+      "_id": 34
     },
-    {
-      "name": "dad",
-      "imageUrl": "https://media.istockphoto.com/id/1282050777/vector/boot-icon-on-transparent-background.jpg?s=612x612&w=0&k=20&c=BM1ryP1FqK-cy0A0_lB4KAbdZyU_u13CQGtzhcVH0xo=",
-      "weather": "cold",
-      "id": 37
-    },
+
     {
       "name": "dad",
       "imageUrl": "https://i.etsystatic.com/43432212/r/il/ad26b7/4998980354/il_794xN.4998980354_86ox.jpg",
       "weather": "cold",
-      "id": 38
+      "_id": 38
     }
   ]
 }

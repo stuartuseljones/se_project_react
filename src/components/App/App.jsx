@@ -37,7 +37,7 @@ function App() {
       : setCurrentTemperatureUnit("F");
   };
 
-  const handleAddItem = (inputValues) => {
+  const handleAddItem = (inputValues, reset) => {
     const newCardData = {
       name: inputValues.name,
       imageUrl: inputValues.imageUrl,
@@ -49,6 +49,7 @@ function App() {
         setClothingItems((prevItems) => [data, ...prevItems]);
         closeActiveModal();
         handleReset();
+        reset();
       })
       .catch(console.error);
   };
@@ -154,7 +155,7 @@ function App() {
           isOpen={activeModal === "add-garment"}
           activeModal={activeModal}
           onClose={closeActiveModal}
-          handleAddItem={handleAddItem}
+          onAddItem={handleAddItem}
           buttonText="Add garment"
         />
         <ItemModal
