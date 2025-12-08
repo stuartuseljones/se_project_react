@@ -2,7 +2,9 @@
 
 An webpage that will help you select what to wear according to the weather at the given location.
 
-https://stuartuseljones.github.io/se_project_react/
+Accompanying Backend (Express) Repository can be found here:
+https://github.com/stuartuseljones/se_project_express
+
 Video overview available here:
 https://drive.google.com/file/d/1LNGh4B4GVDuWDz3-Mz-Jzi3K69ZSoYiX/view?usp=sharing
 
