@@ -38,14 +38,14 @@ const RegisterModal = ({ isOpen, onSignUp, onClose, onLoginClick }) => {
       secondaryButtonText="or Log In"
       onSecondaryClick={onLoginClick}
     >
-      <label className="modal__label" htmlFor="email">
+      <label className="modal__label" htmlFor="register-email">
         Email *
         <input
           type="email"
           className={`modal__input ${
             isSubmitted && errors.email ? "modal__input_type_error" : ""
           }`}
-          id="email"
+          id="register-email"
           name="email"
           placeholder="Email"
           value={values.email}
@@ -55,14 +55,14 @@ const RegisterModal = ({ isOpen, onSignUp, onClose, onLoginClick }) => {
           <span className="modal__error">{errors.email}</span>
         )}
       </label>
-      <label className="modal__label" htmlFor="password">
+      <label className="modal__label" htmlFor="register-password">
         Password *
         <input
           type="password"
           className={`modal__input ${
             isSubmitted && errors.password ? "modal__input_type_error" : ""
           }`}
-          id="password"
+          id="register-password"
           name="password"
           placeholder="Password"
           value={values.password}
@@ -72,14 +72,14 @@ const RegisterModal = ({ isOpen, onSignUp, onClose, onLoginClick }) => {
           <span className="modal__error">{errors.password}</span>
         )}
       </label>
-      <label className="modal__label" htmlFor="name">
+      <label className="modal__label" htmlFor="register-name">
         Name *
         <input
           type="text"
           className={`modal__input ${
             isSubmitted && errors.name ? "modal__input_type_error" : ""
           }`}
-          id="name"
+          id="register-name"
           name="name"
           placeholder="Name"
           value={values.name}
@@ -89,14 +89,14 @@ const RegisterModal = ({ isOpen, onSignUp, onClose, onLoginClick }) => {
           <span className="modal__error">{errors.name}</span>
         )}
       </label>
-      <label className="modal__label" htmlFor="avatarUrl">
+      <label className="modal__label" htmlFor="register-avatarUrl">
         Avatar URL *
         <input
           type="url"
           className={`modal__input ${
             isSubmitted && errors.avatarUrl ? "modal__input_type_error" : ""
           }`}
-          id="avatarUrl"
+          id="register-avatarUrl"
           name="avatarUrl"
           placeholder="Avatar URL"
           value={values.avatarUrl}

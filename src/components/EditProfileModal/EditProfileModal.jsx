@@ -5,11 +5,14 @@ import CurrentUserContext from "../../contexts/CurrentUserContext";
 
 const EditProfileModal = ({ isOpen, onSubmit, onClose }) => {
   const currentUser = useContext(CurrentUserContext);
-  
-  const defaultValues = useMemo(() => ({
-    name: currentUser?.name || "",
-    avatarUrl: currentUser?.avatar || "",
-  }), [currentUser?.name, currentUser?.avatar]);
+
+  const defaultValues = useMemo(
+    () => ({
+      name: currentUser?.name || "",
+      avatarUrl: currentUser?.avatar || "",
+    }),
+    [currentUser?.name, currentUser?.avatar]
+  );
   const {
     values,
     handleChange,
@@ -36,14 +39,14 @@ const EditProfileModal = ({ isOpen, onSubmit, onClose }) => {
       buttonText="Save changes"
       isValid={isValid}
     >
-      <label className="modal__label" htmlFor="name">
+      <label className="modal__label" htmlFor="editprofile-name">
         Name *
         <input
           type="text"
           className={`modal__input ${
             isSubmitted && errors.name ? "modal__input_type_error" : ""
           }`}
-          id="name"
+          id="editprofile-name"
           name="name"
           placeholder="Name"
           value={values.name || currentUser?.name || ""}
@@ -53,14 +56,14 @@ const EditProfileModal = ({ isOpen, onSubmit, onClose }) => {
           <span className="modal__error">{errors.name}</span>
         )}
       </label>
-      <label className="modal__label" htmlFor="avatarUrl">
+      <label className="modal__label" htmlFor="editprofile-avatarUrl">
         Avatar *
         <input
           type="url"
           className={`modal__input ${
             isSubmitted && errors.avatarUrl ? "modal__input_type_error" : ""
           }`}
-          id="avatarUrl"
+          id="editprofile-avatarUrl"
           name="avatarUrl"
           placeholder="Avatar URL"
           value={values.avatarUrl || currentUser?.avatar || ""}

@@ -30,14 +30,14 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
       buttonText="Add garment"
       isValid={isValid}
     >
-      <label className="modal__label" htmlFor="name">
+      <label className="modal__label" htmlFor="additem-name">
         Name
         <input
           type="text"
           className={`modal__input ${
             isSubmitted && errors.name ? "modal__input_type_error" : ""
           }`}
-          id="name"
+          id="additem-name"
           name="name"
           placeholder="Name"
           value={values.name}
@@ -47,14 +47,14 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
           <span className="modal__error">{errors.name}</span>
         )}
       </label>
-      <label className="modal__label" htmlFor="imageUrl">
+      <label className="modal__label" htmlFor="additem-imageUrl">
         Image URL
         <input
           type="url"
           className={`modal__input ${
             isSubmitted && errors.imageUrl ? "modal__input_type_error" : ""
           }`}
-          id="imageUrl"
+          id="additem-imageUrl"
           name="imageUrl"
           placeholder="Image URL"
           value={values.imageUrl}

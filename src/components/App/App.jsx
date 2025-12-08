@@ -27,14 +27,12 @@ import {
   registerUser,
   loginUser,
   getCurrentUser,
-  handleServerResponse,
   removeItem,
   updateUserProfile,
   addCardLike,
   removeCardLike,
 } from "../../utils/api";
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -42,7 +40,7 @@ function App() {
     temp: { F: 999 },
     city: "",
   });
-  const [isLoggedIn, setIsLoggedIn] = useState({});
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
   const [clothingItems, setClothingItems] = useState([]);
@@ -140,6 +138,7 @@ function App() {
         setCurrentUser(user);
         setIsLoggedIn(true);
         setActiveModal(""); // Close any open modals
+        useNavigate("/")();
       })
       .catch((error) => {
         console.error("Login error:", error);
@@ -167,6 +166,7 @@ function App() {
     localStorage.removeItem("jwt");
     setCurrentUser(null);
     setIsLoggedIn(false);
+    useNavigate("/")();
   };
 
   useEffect(() => {

@@ -32,14 +32,14 @@ const LoginModal = ({ isOpen, onLogin, onRegisterClick, onClose }) => {
       secondaryButtonText="or Sign Up"
       onSecondaryClick={onRegisterClick}
     >
-      <label className="modal__label" htmlFor="email">
+      <label className="modal__label" htmlFor="login-email">
         Email
         <input
           type="email"
           className={`modal__input ${
             isSubmitted && errors.email ? "modal__input_type_error" : ""
           }`}
-          id="email"
+          id="login-email"
           name="email"
           placeholder="Email"
           value={values.email}
