@@ -1,0 +1,230 @@
+/* TODO - check font parameters */
+/* Style hover states for modal buttons */
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.modal_opened {
+  visibility: visible;
+}
+
+.modal__content-form {
+  padding: 28px 28px 36px 28px;
+}
+.modal__content {
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  border: 1px;
+  border-color: rgba(0, 0, 0, 0.3);
+  max-width: 496px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  border-style: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.modal__close-icon {
+  background: transparent;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.modal__title {
+  margin: 0;
+  font-family: CabinetGrotesk-bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__input {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: CabinetGrotesk-bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  outline: none;
+  background-color: transparent;
+}
+
+.modal__input_type_error {
+  border-bottom: 2px solid #ff4d4d;
+  color: #ff4d4d;
+  animation: shake 0.3s;
+}
+
+.modal__label_type_radio {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__label_type_radio:has(input[type="radio"]:checked) {
+  color: rgba(0, 0, 0, 1);
+}
+
+.modal__label {
+  font-family: CabinetGrotesk-bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 24px 0 0 0;
+  margin: 0;
+  border: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__legend {
+  font-family: CabinetGrotesk-bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 24px 0 12px;
+  /* checked */
+}
+
+.modal__radio-buttons {
+  border-style: none;
+  display: flex;
+  flex-direction: column;
+  border-style: none;
+  padding: 0;
+  font-family: CabinetGrotesk-bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.modal__radio-input {
+  margin: 0 8px 8px 0;
+}
+
+.modal__button-container {
+  display: flex;
+  align-items: center;
+  margin: 32px 0 0 0;
+}
+
+.modal__submit {
+  border-style: none;
+  font-family: CabinetGrotesk-bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.modal__submit:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal__submit_disabled {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  color: rgba(255, 255, 255, 1) !important;
+  /* -webkit-text-fill-color: rgba(255, 255, 255, 1) !important; */
+  cursor: not-allowed !important;
+  border-style: none !important;
+  font-family: CabinetGrotesk-Regular !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  font-weight: 700 !important;
+  border-radius: 4px !important;
+  padding: 8px 16px !important;
+  margin: 0 !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.modal__secondary-button {
+  border: none;
+  background: none;
+  font-family: CabinetGrotesk-Regular !important;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0 0 0 12px;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal__secondary-button:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.modal__error {
+  color: #ff4d4d;
+  font-size: 12px;
+  line-height: 15px;
+  display: block;
+  margin-top: 8px;
+  font-family: CabinetGrotesk-bold;
+  animation: fadeIn 0.3s ease;
+  position: relative;
+  color: #ff4d4d;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 8px;
+  display: block;
+  font-weight: 400;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,80 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 32px 0 0 0;
+  margin: 0 40px 28px;
+}
+
+.header__logo {
+  width: 89px;
+  height: 40px;
+}
+
+.header__date-and-location {
+  margin: 0 0 0 24px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: CabinetGrotesk-Bold;
+}
+
+.header__add-clothes-btn {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  border-style: none;
+  font-family: CabinetGrotesk-Bold;
+}
+
+.header__user-container {
+  display: flex;
+  align-items: center;
+}
+.header__nav-link {
+  color: black;
+  text-decoration: none;
+}
+.header__name {
+  margin: 0 0 0 20px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: CabinetGrotesk-Bold;
+}
+
+.header__signup-button {
+  padding: 0 20px 0 20px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: CabinetGrotesk-Bold;
+  cursor: pointer;
+  border-style: none;
+}
+
+.header__login-button {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: CabinetGrotesk-Bold;
+  cursor: pointer;
+  border-style: none;
+}
+
+.header__avatar {
+  width: 40px;
+  height: 40px;
+  margin-left: 12px;
+}
+
+.header__avatar_type_placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2f2f2f;
+  color: white;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-weight: bold;
+  font-size: 18px;
+}
