@@ -23,7 +23,7 @@ function ItemCard({ item, onCardClick, onCardLike }) {
   }`;
 
   return (
-    <li className="cards__list">
+    <li className="card">
       <div className="card__content">
         <h2 className="card__name">{item.name}</h2>
         {isLoggedIn && (

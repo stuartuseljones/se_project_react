@@ -2,6 +2,16 @@
   margin: 0 40px 0 40px;
 }
 
+.card {
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  position: relative;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
 .cards__list {
   margin: 0;
   padding: 0;

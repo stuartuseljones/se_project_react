@@ -20,19 +20,18 @@ import EditProfileModal from "../EditProfileModal/EditProfileModal";
 
 // Utils/API
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
+import { fallbackCoords, apiKey } from "../../utils/constants";
 import {
-  apiKey,
   getItems,
   addItem,
-  registerUser,
-  loginUser,
   getCurrentUser,
   removeItem,
   updateUserProfile,
   addCardLike,
   removeCardLike,
 } from "../../utils/api";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { registerUser, loginUser } from "../../utils/auth";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -138,7 +137,6 @@ function App() {
         setCurrentUser(user);
         setIsLoggedIn(true);
         setActiveModal(""); // Close any open modals
-        useNavigate("/")();
       })
       .catch((error) => {
         console.error("Login error:", error);
@@ -166,7 +164,6 @@ function App() {
     localStorage.removeItem("jwt");
     setCurrentUser(null);
     setIsLoggedIn(false);
-    useNavigate("/")();
   };
 
   useEffect(() => {
@@ -241,7 +238,6 @@ function App() {
     };
 
     // Try browser Geolocation API first, fall back to a default location
-    const fallbackCoords = { latitude: 42.1973611, longitude: -122.7130278 };
 
     if (navigator && navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
